@@ -105,8 +105,9 @@ body {
   width: 100%;
   overflow: hidden;
   animation: animateMid 15s linear infinite;
-  position: absolute;
   -webkit-background-clip: text;
+  position: absolute;
+
   z-index: -1;
 
 }
@@ -115,6 +116,7 @@ body {
 font-size: 500px;
   margin-top: -95px;
   color: rgba(225, 225, 225, .1);
+
 z-index: 1;
  }
 
