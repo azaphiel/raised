@@ -25,7 +25,7 @@
     }
 
     function percentage(per) {
-      return (100 / 200) * per;
+      return (100 / 100) * per;
     }
   </script>
 
@@ -204,13 +204,7 @@
     <!--<h2 id="demo">€0</h2>-->
   </div>
 
+<button class="btn" onclick="buttonClick5(),buttonClick6()">Donate 8€</button>
 
-  <div class="applePayButtonContainer" onclick="buttonClick5(),buttonClick6()">
-    <a lang="us" class="applePayButton" style="-webkit-appearance: -apple-pay-button;
-    height: 64px; width: 300px;
-    -apple-pay-button-style: white-outline; display: block;
-    -apple-pay-button-type: donate;" onclick="javascript:startApplePaySession()" title="Start Apple Pay" role="link" tabindex="0"></a>
-
-  </div>
 </body>
 </html>
