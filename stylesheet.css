@@ -1,63 +1,61 @@
 body {
-            position: absolute;
-            width: 1670px;
-            height: 1030px;
-            font-family: arial;
-            background-color: black;
-        }
-
-        .outer {
-            width: 100%;
-            height: 386px;
-            overflow: hidden;
-            position: relative;
-            margin-top: 300px;
-            text-align: center;
-        }
-
-		h3{
-
-		}
-
-        .inner {
-    background: url(color3.jpg);
-    bottom: 0;
-    height: 0%;
-    width: 100%;
-    overflow: hidden;
-    animation: animateMid 15s linear infinite;
-    -webkit-background-clip: text;
-    position: absolute;
+  position: absolute;
+  width: 1670px;
+  height: 1030px;
+  font-family: arial;
+  background-color: black;
 }
 
-        .inner h2 {
-            font-size: 500px;
-            margin-top: -95px;
-color: white;
-
-        }
-
-        @keyframes animateMid {
-            0% {
-                background-position: left 800px top 500px;
-            }
-        }
-
-p {
-    color: transparent;
-    font-size: 500px;
-    top: -95px;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 130%;
-    margin: 0;
-    position: absolute;
-    font-weight: bold;
-    background: #2c2c2c;
-    background-clip: text;
-    -webkit-background-clip: text;
+.outer {
+  width: 100%;
+  height: 386px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 300px;
+  text-align: center;
 }
+
+.inner {
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+
+
+  position: absolute;
+}
+
+.inner h2 {
+  font-size: 500px;
+  margin-top: -95px;
+  background:  url(color3.jpg);
+  animation: animateMid 15s linear infinite;
+  -webkit-background-clip: text;
+  color: rgba(255, 255, 255, .1);
+
+}
+@keyframes animateMid {
+  0% {
+    background-position: left 800px top 500px;
+  }
+}
+
+
+p{
+  color: transparent;
+  font-size: 500px;
+  top: -95px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 130%;
+  margin: 0;
+  position: absolute;
+  font-weight: bold;
+  background: goldenrod;
+-webkit-background-clip: text;
+
+}
+
 .perc {
   width: 100%;
   height: auto;
