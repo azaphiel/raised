@@ -35,7 +35,7 @@ body {
 }
 @keyframes animateMid {
   0% {
-    background-position: left 800px top 500px;
+    background-position: left 800px top 0px;
   }
 }
 
@@ -51,7 +51,7 @@ p{
   margin: 0;
   position: absolute;
   font-weight: bold;
-  background: goldenrod;
+  background: white;
 -webkit-background-clip: text;
 
 }
