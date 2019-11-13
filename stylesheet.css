@@ -86,7 +86,6 @@ p{
   padding: 16px 72px;
   text-align: center;
   font-size: 16px;
-  margin: 4px 2px;
   margin-top: -200px;
   margin-left: 43.5%;
   transition: 0.3s;
@@ -96,6 +95,21 @@ p{
 }
 
 .btn:hover {
+  color: black;
+  background-color: gold;
+}
+
+input[type=text] {
+  width: 4%;
+  padding: 18px;
+  box-sizing: border-box;
+  border: none;
+  background-color: goldenrod;
+  transition: 0.3s;
+  color: white;
+  font-weight: bolder;
+}
+input[type=text]:hover {
   color: black;
   background-color: gold;
 }

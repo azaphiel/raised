@@ -8,6 +8,9 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
+
+
   <div class="skill">
     <div class="outer">
       <div class="inner" data-progress="100%" data-value="0">
@@ -29,19 +32,19 @@
 
     function buttonClick6() {
 
-      perc += 5;
+      perc += +document.getElementById("donation").value;
       document.getElementById('here').innerHTML = percentage(perc) + "%";
       document.getElementById('demo2').style.height = (125 - percentage(perc)) + "%";
     }
 
     function buttonClick5() {
-      i += 5;
+      i += +document.getElementById("donation").value;
       document.getElementById('demo').innerHTML = "€" + i;
       document.getElementById('demo2').innerHTML = "€" + i
     }
 
     function percentage(per) {
-      return (100 / 100) * per;
+      return (100 / 200) * per;
     }
 
     $(document).ready(function() {
@@ -60,7 +63,14 @@
   <img src="logo.png" class="logo" width="150px" height="150px" alt="logo">
   <img src="qr.png" class="qrCode" width="150px" height="150px" alt="qr">
 
-  <button class="btn" onclick="buttonClick5(),buttonClick6()">Donate 5€</button>
+  <button class="btn" onclick="buttonClick5(),buttonClick6()">Donate!</button>
+
+
+  <input type="text" id="donation" background-color="goldenrod" name="quantity" min="1" max="5">
+
+
+
+
 </body>
 
 </html>
