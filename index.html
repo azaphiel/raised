@@ -23,22 +23,40 @@
   </div>
 
   <script>
+let money = null;
+  fetch("https://api.raisedforyou.com/api/v1/sessions/726F37/donations", {
+    method: 'GET'})
+
+  .then( result => result.json())
+  .then( data => {console.log(data[0].amount); money = data[0].amount;})
+
+
+
+
 
     var i = 0;
-
     var perc = 0;
 
     function buttonClick6() {
 
-      perc += +document.getElementById("donation").value;
+      perc += (money/100);
+      //with button one manual inc
+      //perc += +document.getElementById("donation").value + (money/100);
       document.getElementById('here').innerHTML = percentage(perc) + "%";
       document.getElementById('demo2').style.height =
        (125 - percentage(perc)) + "%";
     }
 
+
+
+
+
+
     function buttonClick5() {
 
-      i += +document.getElementById("donation").value;
+      i += (money/100);
+       //with button one manual inc
+        //i += +document.getElementById("donation").value+ (money/100);
       document.getElementById('demo').innerHTML = "€" + i;
       document.getElementById('demo2').innerHTML = "€" + i
     }
@@ -54,7 +72,12 @@
         height: skillVal
       }, 2100);
 
-    });
+    })
+
+
+
+
+
   </script>
 </head>
 
@@ -65,10 +88,12 @@
   <img src="3.png" class="raised" width="200px" height="100px" alt="logo">
 
   <button class="btn" onclick="buttonClick5(),buttonClick6()">
-    Donate!</button>
+    Refresh</button>
+
+  <!-- Manual input area
   <input type="text" id="donation" background-color="goldenrod"
   name="quantity" min="1" max="5">
-
+-->
 
 
 
