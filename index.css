@@ -1,7 +1,7 @@
 body {
   position: absolute;
   width: 1670px;
-  height: 97%;
+  height: 90%;
   font-family: arial;
   background-color: black;
 }
@@ -70,7 +70,7 @@ font-family:arial;
 
 .logo {
   position: absolute;
-  
+
   left: 0;
   top: 0;
 }
