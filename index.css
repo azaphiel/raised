@@ -1,7 +1,7 @@
 body {
   position: absolute;
   width: 1670px;
-  height: 90%;
+  height: 97%;
   font-family: arial;
   background-color: black;
 }
@@ -84,6 +84,7 @@ font-family:arial;
   left: 0;
   top: 90%;
   position: absolute;
+  
 
 
 }
