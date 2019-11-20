@@ -2,8 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="viewport" content="width=device-width,
-  initial-scale=0, maximum-scale=1, user-scalable=no" />
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1,
+maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
   <meta charset="utf-8">
   <title>Raised by You</title>
   <link rel="stylesheet" type="text/css" href="index.css">
@@ -25,28 +29,24 @@
 
   <script>
   setInterval(function () {document.getElementById("mybutton").click();}, 10000);
-    let money = null;
-    let total = null;
+  let money = null;
+  let total = null;
+
+  function buttonClickRef() {
+
+
     fetch("https://api.raisedforyou.com/api/v1/sessions/726F37/donations", {
         method: 'GET'
       })
 
       .then(result => result.json())
       .then(data => {
-        console.log(data[0].amount);
-        money = data[0].amount;
+        console.log(data[0].amount); total = 0;
+          for (var c = 0; c < data.length; c++) {
+          total += data[c].amount;}
       })
 
-    //for (var c = 0; c < ?.length; c++) {
-    //  total += ?[c].amount;}
 
-//var jsonAmo = Object.amount(json); jsonAmo.forEach(data => { total += elem.amount })
-
-//    JSON.forEach(elem => { total += elem.amount })
-
-  //  Object.amount(json).forEach(function(amount) {
-  //  var value = json[amount];
-  //  ...});
 
 
 
@@ -54,9 +54,9 @@
     var i = 0;
     var perc = 0;
 
-    function buttonClickRef() {
 
-      perc =(money / 100);
+
+      perc =(total/ 100);
       //with button one manual inc
       //perc += +document.getElementById("donation").value + (money/100);
       document.getElementById('here').innerHTML = percentage(perc) + "%";
@@ -66,7 +66,7 @@
 
 
 
-      i = (money / 100);
+      i = (total / 100);
       //with button one manual inc
       //i += +document.getElementById("donation").value+ (money/100);
       document.getElementById('demo').innerHTML = "€" + i;
