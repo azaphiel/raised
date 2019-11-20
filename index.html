@@ -17,25 +17,25 @@ maximum-scale=1,user-scalable=no">
     <div class="outer">
       <div class="inner" data-progress="100%" data-value="0">
         <p id="demo2">€0</p>
-        <h2 id="demo">€0</h2>
+        <h2 id="demo" >€0</h2>
         <div></div>
       </div>
     </div>
   </div>
 
   <div class="perc">
-    <h5 id="here">0%</h5>
+    <h5 id="here" step="0.1">0%</h5>
   </div>
 
   <script>
-  setInterval(function () {document.getElementById("mybutton").click();}, 10000);
+  setInterval(function () {document.getElementById("mybutton").click();}, 1000);
   let money = null;
   let total = null;
 
   function buttonClickRef() {
 
 
-    fetch("https://api.raisedforyou.com/api/v1/sessions/726F37/donations", {
+    fetch("https://api.raisedforyou.com/api/v1/sessions/17AED0/donations", {
         method: 'GET'
       })
 
@@ -56,7 +56,7 @@ maximum-scale=1,user-scalable=no">
 
 
 
-      perc =(total/ 100);
+      perc =Math.round((total/ 100));
       //with button one manual inc
       //perc += +document.getElementById("donation").value + (money/100);
       document.getElementById('here').innerHTML = percentage(perc) + "%";
@@ -66,11 +66,11 @@ maximum-scale=1,user-scalable=no">
 
 
 
-      i = (total / 100);
+      i = Math.round((total / 100));
       //with button one manual inc
       //i += +document.getElementById("donation").value+ (money/100);
       document.getElementById('demo').innerHTML = "€" + i;
-      document.getElementById('demo2').innerHTML = "€" + i
+      document.getElementById('demo2').innerHTML = "€" + i;
     }
 
     function percentage(per) {
