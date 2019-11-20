@@ -32,6 +32,7 @@ body {
   -webkit-background-clip: text;
   color: rgba(255, 255, 255, .1);
 
+
 }
 @keyframes animateMid {
   0% {
@@ -76,7 +77,7 @@ font-family:arial;
 .qrCode {
   position: absolute;
   right: 0%;
-  top: 0%;
+  top: -1.5%;
 }
 .raised{
   left: 0;
@@ -99,6 +100,7 @@ font-family:arial;
   text-decoration: none;
   cursor: pointer;
   position: absolute;
+  visibility: hidden;
 }
 
 .btn:hover {

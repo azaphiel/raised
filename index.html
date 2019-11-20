@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width,
+  initial-scale=0, maximum-scale=1, user-scalable=no" />
   <meta charset="utf-8">
   <title>Raised by You</title>
   <link rel="stylesheet" type="text/css" href="index.css">
@@ -23,13 +24,29 @@
   </div>
 
   <script>
-let money = null;
-  fetch("https://api.raisedforyou.com/api/v1/sessions/726F37/donations", {
-    method: 'GET'})
+  setInterval(function () {document.getElementById("mybutton").click();}, 10000);
+    let money = null;
+    let total = null;
+    fetch("https://api.raisedforyou.com/api/v1/sessions/726F37/donations", {
+        method: 'GET'
+      })
 
-  .then( result => result.json())
-  .then( data => {console.log(data[0].amount); money = data[0].amount;})
+      .then(result => result.json())
+      .then(data => {
+        console.log(data[0].amount);
+        money = data[0].amount;
+      })
 
+    //for (var c = 0; c < ?.length; c++) {
+    //  total += ?[c].amount;}
+
+//var jsonAmo = Object.amount(json); jsonAmo.forEach(data => { total += elem.amount })
+
+//    JSON.forEach(elem => { total += elem.amount })
+
+  //  Object.amount(json).forEach(function(amount) {
+  //  var value = json[amount];
+  //  ...});
 
 
 
@@ -37,32 +54,27 @@ let money = null;
     var i = 0;
     var perc = 0;
 
-    function buttonClick6() {
+    function buttonClickRef() {
 
-      perc += (money/100);
+      perc =(money / 100);
       //with button one manual inc
       //perc += +document.getElementById("donation").value + (money/100);
       document.getElementById('here').innerHTML = percentage(perc) + "%";
       document.getElementById('demo2').style.height =
-       (125 - percentage(perc)) + "%";
-    }
+        (125 - percentage(perc)) + "%";
 
 
 
 
-
-
-    function buttonClick5() {
-
-      i += (money/100);
-       //with button one manual inc
-        //i += +document.getElementById("donation").value+ (money/100);
+      i = (money / 100);
+      //with button one manual inc
+      //i += +document.getElementById("donation").value+ (money/100);
       document.getElementById('demo').innerHTML = "€" + i;
       document.getElementById('demo2').innerHTML = "€" + i
     }
 
     function percentage(per) {
-      return (100 / 200) * per;
+      return (100 / 100) * per;
     }
 
     $(document).ready(function() {
@@ -73,11 +85,6 @@ let money = null;
       }, 2100);
 
     })
-
-
-
-
-
   </script>
 </head>
 
@@ -87,7 +94,7 @@ let money = null;
   <img src="qr.png" class="qrCode" width="150px" height="150px" alt="qr">
   <img src="3.png" class="raised" width="200px" height="100px" alt="logo">
 
-  <button class="btn" onclick="buttonClick5(),buttonClick6()">
+  <button class="btn" id="mybutton" onclick="buttonClickRef()">
     Refresh</button>
 
   <!-- Manual input area
