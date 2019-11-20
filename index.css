@@ -70,7 +70,7 @@ font-family:arial;
 
 .logo {
   position: absolute;
-  width: 300px;
+  
   left: 0;
   top: 0;
 }
@@ -84,7 +84,7 @@ font-family:arial;
   left: 0;
   top: 90%;
   position: absolute;
-  
+
 
 }
 
