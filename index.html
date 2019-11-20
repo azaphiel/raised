@@ -56,7 +56,7 @@ maximum-scale=1,user-scalable=no">
 
 
 
-      perc =Math.round((total/ 100));
+      perc = Math.round((total / 100));
       //with button one manual inc
       //perc += +document.getElementById("donation").value + (money/100);
       document.getElementById('here').innerHTML = percentage(perc) + "%";
@@ -74,7 +74,7 @@ maximum-scale=1,user-scalable=no">
     }
 
     function percentage(per) {
-      return (100 / 1000) * per;
+      return Math.round((100 / 1000) * per);
     }
 
     $(document).ready(function() {
